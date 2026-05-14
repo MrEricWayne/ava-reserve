@@ -124,7 +124,7 @@ export default function BookPage() {
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: 24 }}>
+        <div style={{  }}>
           {/* Calendar grid */}
           <div className="card">
             <div className="card-body" style={{ padding: 12 }}>
@@ -211,7 +211,7 @@ export default function BookPage() {
               <span className="card-title">My Upcoming Bookings</span>
             </div>
             <div className="card-body" style={{ padding: 0 }}>
-              <table className="data-table">
+              <div className="table-scroll"><table className="data-table">
                 <thead><tr><th>Date</th><th>Time</th><th>Bay</th><th>Service</th><th>Vehicle</th><th>Status</th></tr></thead>
                 <tbody>
                   {myBookings.filter(b => b.status === 'confirmed').slice(0, 5).map(b => (
